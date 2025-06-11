@@ -4,6 +4,7 @@
 package gamelogic.player;
 
 import java.awt.event.KeyEvent;
+import java.awt.event.FocusEvent.Cause;
 
 import gameengine.input.KeyboardInputManager;
 
@@ -26,6 +27,17 @@ class PlayerInput {
 	 */
 	public static boolean isLeftKeyDown() {
 		return KeyboardInputManager.isKeyDown(KeyEvent.VK_A) || KeyboardInputManager.isKeyDown(KeyEvent.VK_LEFT);
+	}
+	
+	//public static KeyEvent()
+
+	public static boolean IsKeyDown(char keyDown) {
+		switch (keyDown) {
+			case 'A': return KeyboardInputManager.isKeyDown(KeyEvent.VK_A);
+			case 'Q': return KeyboardInputManager.isKeyDown(KeyEvent.VK_Q);
+
+			default: return false;
+		}
 	}
 	/**
 	 * 
